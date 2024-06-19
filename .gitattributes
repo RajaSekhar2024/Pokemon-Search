@@ -1,0 +1,14 @@
+touch .gitattributes
+# Ensure all text files have LF line endings in the repository
+* text=auto
+
+# Handle end-of-line normalization for specific files
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# Specify binary files to prevent Git from attempting to perform diff
+*.jpg binary
+*.png binary
+
+# Custom diff for specific file types
+*.md diff=markdown
